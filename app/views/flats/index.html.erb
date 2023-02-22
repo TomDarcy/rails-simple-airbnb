@@ -9,7 +9,7 @@
             <%= image_tag(flat.image_url, class: "card-img-to") %>
             <div class="card-body">
               <h5 class="card-title"><%= flat.name %></h5>
-              <p class="card-text"><%= flat.description %></p>
+              <p class="card-text"><%= flat.description.truncate(50) %></p>
               <div class="bottom-card">
                 <div class="flex">
                   <div class="flex align-items-center">

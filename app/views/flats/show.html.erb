@@ -1,11 +1,73 @@
-<h2><%= @flat.name %></h2>
-<p><%= @flat.address %></p>
-<p><%= @flat.description %></p>
-<p><%= @flat.price_per_night %></p>
-<p><%= @flat.number_of_guests %></p>
-<p><%= @flat.image_url %></p>
-<%= link_to 'Back', flats_path %>
-<%= link_to 'Edit', edit_flat_path(@flat) %>
-<%= link_to "Delete", flat_path(@flat),
-data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger btn-size
-" %>
+<%= image_tag(@flat.image_url, class: "map") %>
+<div class="container margin-top-negative">
+  <div class="row-show">
+    <div class="col-8 left-side">
+      <div class="flat-show-card">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A little more about this place...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+      <div class="flat-show-card">
+        <%= image_tag "map.png", class: "map-image" %>
+      </div>
+    </div>
+    <div class="col-4 right-side">
+      <div class="booking">
+        <h2>Book now</h2>
+        <div class="row g-3 align-items-center mb-2
+">
+          <div class="col-auto label">
+            <label for="inputfrom" class="col-form-label">From:</label>
+          </div>
+          <div class="col-auto">
+            <input type="date" id="inputfrom" class="form-control date" aria-describedby="passwordHelpInline">
+          </div>
+        </div>
+        <div class="row g-3 align-items-center mb-2">
+          <div class="col-auto label">
+            <label for="inputto" class="col-form-label">To:</label>
+          </div>
+          <div class="col-auto">
+            <input type="date" id="inputto" class="form-control date" aria-describedby="passwordHelpInline">
+          </div>
+        </div>
+        <div class="row g-3 align-items-center mb-2
+">
+          <button type="button" class="btn btn-success">Book now</button>
+        </div>
+      </div>
+      <div class="booking">
+        <h4>Details</h2>
+        <div class="flex">
+          <% @flat.number_of_guests.times do  %>
+            <i class="fas fa-user"></i>
+          <% end %>
+          <div class="price">
+            <p>Price per night: £<%= @flat.price_per_night %> </p>
+          </div>
+        </div>
+      </div>
+      <div class="flat-show-card">
+        <div class="flex-align">
+          <h4 class="no-mb">Share</h6>
+          <div class="flex">
+            <i class="fa-brands fa-facebook-square me-2"></i>
+            <i class="fa-brands fa-twitter-square me-2"></i>
+            <i class="fa-brands fa-pinterest-square me-2"></i>
+          </div>
+        </div>
+      </div>
+      <div class="flat-show-card">
+        <h4>Control panel</h4>
+        <div class="button-box">
+          <%= link_to 'Back', flats_path, class: "btn btn-primary btn-size"%>
+          <%= link_to 'Edit', edit_flat_path(@flat), class: "btn btn-warning btn-size" %>
+          <%= link_to "Delete", flat_path(@flat),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger btn-size" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

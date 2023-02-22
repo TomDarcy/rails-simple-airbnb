@@ -65,3 +65,92 @@
   padding: 10px;
   margin-right: -4px;
 }
+.map {
+  height: 350px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.flat-show-card {
+  background: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+  border-radius: 3px;
+}
+
+.booking {
+  background: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+  border-radius: 3px;
+}
+
+.row-show {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+/* set text in .price to vertically middle  */
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.left-side {
+  padding-right: 10px;
+}
+.btn-size {
+  width: 30%;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-right: -4px;
+}
+
+.map-image {
+  height: 350px;
+  width: 100%;
+  background-position: center;
+  background-size: auto;
+}
+
+.margin-top-negative {
+  margin-top: -65px;
+}
+
+.date {
+  width: 100%;
+  align-self: center;
+}
+
+.label {
+  width: 20%;
+}
+
+.navbar {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.container-form {
+  margin: 0 auto;
+  width: 60%;
+  max-width: 960px;
+  padding: 10px 10px;
+  padding-top: 20px;
+}
