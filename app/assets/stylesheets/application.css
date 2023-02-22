@@ -13,3 +13,55 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  padding: 10px 10px;
+  padding-top: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 960px;
+  padding: 10px 10px;
+  padding-top: 20px;
+  height: 90%;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  height: auto;
+}
+
+/* set content of bottom card to bottom of parent card*/
+.bottom-card {
+}
+
+.flex {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.right-nav {
+  display: flex;
+}
+
+.formnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-right: -4px;
+}
